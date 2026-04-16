@@ -32,29 +32,32 @@ right.sort()
 print("right queue:",right)
 
 if dir == 1:
+    left.reverse()
+    right.reverse()
     for i in range(len(left)):
-     s=current-left[0]
+     s=abs(current-left[0])
      total=total+s
      list2.append(f"{current}--->{left[0]}={s}")
      current=left[0]
      left.remove(current)
         
     for i in range(len(right)):
-     s=right[0]-current
+     s=abs(right[0]-current)
      total=total+s
      list2.append(f"{current}--->{right[0]}={s}")
      current=right[0]
      right.remove(current)
 else:
+
     for i in range(len(right)):
-     s=right[0]-current
+     s=abs(right[0]-current)
      total=total+s
      list2.append(f"{current}--->{right[0]}={s}")
      current=right[0]
      right.remove(current)
         
     for i in range(len(left)):
-     s=current-left[0]
+     s=abs(current-left[0])
      total=total+s
      list2.append(f"{current}--->{left[0]}={s}")
      current=left[0]

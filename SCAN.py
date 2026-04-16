@@ -47,17 +47,17 @@ if dir == 1:
      current=right[0]
      right.remove(current)
 else:
-    for i in range(len(right)-1):
+    for i in range(len(right)):
      s=right[0]-current
      total=total+s
      list2.append(f"{current}--->{right[0]}={s}")
      current=right[0]
      right.remove(current)
         
-    for i in range(len(left)):
+    for i in range(len(left)-1):
      s=current-left[0]
      total=total+s
-     list2.append(f"({current}--->{left[0]}={s})")
+     list2.append(f"{current}--->{left[0]}={s}")
      current=left[0]
      left.remove(current)
     
